@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\source",
-    "\\source\\editors"
+    "\\source"
   ],
-  "SelectedNode": "\\Project.xml",
+  "SelectedNode": "\\source\\CreditsState.hx",
   "PreviewInSolutionExplorer": false
 }

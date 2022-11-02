@@ -82,7 +82,8 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			['VS Sonic.exe EXE Multivesre'],
-			['Quaradam',		'quar',		'That guy who did this mod/ main director',								'https://youtube.com/@quaradam',	'1b187d'],
+			['Quaradam',		'quar',		'That guy who did this mod/ main director',		'https://youtube.com/@quaradam',	'1b187d'],
+			[''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],
