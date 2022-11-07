@@ -4684,6 +4684,8 @@ class PlayState extends MusicBeatState
 					note.destroy();
 				}
 				return;
+			case 'Static note':
+				if(boyfriend.animation.getByName('Staicnote') != null) {
 			}
 
 			if (!note.isSustainNote)
