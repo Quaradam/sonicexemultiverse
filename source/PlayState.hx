@@ -3428,8 +3428,6 @@ class PlayState extends MusicBeatState
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String) {
 		switch(eventName) {
-			case 'Cam  Boom Speed':
-				
 			case 'Dadbattle Spotlight':
 				var val:Null<Int> = Std.parseInt(value1);
 				if(val == null) val = 0;
@@ -4684,8 +4682,6 @@ class PlayState extends MusicBeatState
 					note.destroy();
 				}
 				return;
-			case 'Static note':
-				if(boyfriend.animation.getByName('Staicnote') != null) {
 			}
 
 			if (!note.isSustainNote)
