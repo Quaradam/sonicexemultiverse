@@ -1,32 +1,32 @@
 {
-	"songs": [
-		[
-			"too slow encore",
-			"dad",
-			[
-				146,
-				113,
-				253
-			]
-		]
-	],
-	"hiddenUntilUnlocked": false,
+	"storyName": "Too Slow Encore",
+	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "tooslow",
-	"difficulties": "",
-	"weekCharacters": [
-		"sonicexe",
-		"bf",
-		"gf"
-	],
-	"storyName": "Too Slow Encore",
-	"weekName": "Custom Week",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"startUnlocked": true,
 	"hideStoryMode": false,
-	"weekBefore": "tutorial",
-	"startUnlocked": true
+	"songs": [
+		[
+			"too slow encore",
+			"sonicexeTSE",
+			[
+				0,
+				53,
+				195
+			]
+		]
+	],
+	"weekCharacters": [
+		"sonicexe",
+		"bf",
+		"gf"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
 }
