@@ -23,7 +23,7 @@ the script is made by BF Myt.]]--
 
 function onUpdate()
     if getProperty('dad.curCharacter') == 'true-fatal' then
-        DadOfs = 50
+        DadOfs = 20
     end
     if enableSystem == true then
         if mustHitSection == false then
@@ -70,8 +70,8 @@ function onUpdate()
                 BfX = getMidpointX('boyfriend') - 100 - getProperty('boyfriend.cameraPosition[0]') + getProperty('boyfriendCameraOffset[0]')
                 BfY = getMidpointY('boyfriend') - 100 + getProperty('boyfriend.cameraPosition[1]') + getProperty('boyfriendCameraOffset[1]')
             else
-                BfX = getMidpointX('dad') + 100 + getProperty('dad.cameraPosition[0]') + getProperty('opponentCameraOffset[0]')
-                BfY = getMidpointY('dad') - 100 + getProperty('dad.cameraPosition[1]') + getProperty('opponentCameraOffset[1]')
+                BfX = getMidpointX('dad') + 150 + getProperty('dad.cameraPosition[0]') + getProperty('opponentCameraOffset[0]')
+                BfY = getMidpointY('dad') - 150 + getProperty('dad.cameraPosition[1]') + getProperty('opponentCameraOffset[1]')
             end
             if getProperty('boyfriend.animation.curAnim.name') == 'singLEFT' or getProperty('boyfriend.animation.curAnim.name') == 'singLEFT-alt' then
                 triggerEvent('Camera Follow Pos',BfX-BfOfs,BfY)

@@ -139,10 +139,21 @@ class Note extends FlxSprite
 					colorSwap.brightness = 0;
 					lowPriority = true;
 				
-				case 'StaticNotes':
+				case 'StaticNote':
 					ignoreNote = mustPress;
-					reloadNote('Static');
+					reloadNote('static');
 					noteSplashTexture = 'noteSplashes';
+					
+					if (isSustainNote)
+						{
+							hitHealth = 0.2;
+						}
+					
+					else
+					{
+						hitHealth = 0.5;
+					}
+
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;
