@@ -3,8 +3,8 @@ function onCreate()
 	makeLuaSprite('too-slowE/BGSky', 'too-slowE/BGSky', -315, -350);
 	setScrollFactor('too-slowE/BGSky', 0.1, 0.1);
 
-	makeLuaSprite('too-slowE/TreesFG', 'too-slowE/TreesFG', -750, -50);
-	setScrollFactor('too-slowE/TreesFG', 0.6,0.6);
+	makeLuaSprite('too-slowE/TreesFG', 'too-slowE/TreesFG', -528, -50);
+	setScrollFactor('too-slowE/TreesFG', 0.5,0.5);
 
 	makeLuaSprite('too-slowE/OuterBush', 'too-slowE/OuterBush', -335, -250);
 	setScrollFactor('too-slowE/OuterBush', 0.2, 0.2);
@@ -12,7 +12,7 @@ function onCreate()
 	makeLuaSprite('too-slowE/OuterBushUp', 'too-slowE/OuterBushUp', -315, -180);
 	setScrollFactor('too-slowE/OuterBushUp', 0.1, 0.1);
 	
-	makeLuaSprite('too-slowE/Grass', 'too-slowE/Grass', -318, -130);
+	makeLuaSprite('too-slowE/Grass', 'too-slowE/Grass', -338, -130);
 	setScrollFactor('too-slowE/Grass', 0.3, 0.3);
 
 	makeLuaSprite('too-slowE/TreesMid', 'too-slowE/TreesMid', -575, -150);

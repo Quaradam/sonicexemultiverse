@@ -1333,6 +1333,9 @@ class PlayState extends MusicBeatState
 
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
+				
+				case 'too-slow-encore':
+					startCountdown();
 
 				default:
 					startCountdown();
