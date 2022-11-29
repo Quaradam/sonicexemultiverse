@@ -1,16 +1,20 @@
 {
-	"storyName": "too slow Encore REMIX",
-	"difficulties": "easy, normal, hard",
+	"storyName": "too slow Encore",
+	"difficulties": "hard, OG",
 	"hideFreeplay": false,
 	"weekBackground": "too-sloweremix",
-	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": false,
+	"weekCharacters": [
+		"Sonicexe",
+		"",
+		"bf"
+	],
 	"songs": [
 		[
 			"too-sloweremix",
@@ -22,11 +26,7 @@
 			]
 		]
 	],
-	"weekCharacters": [
-		"Sonicexe",
-		"",
-		"bf"
-	],
-	"hiddenUntilUnlocked": false,
-	"weekName": "Too Slow Encore Remix"
+	"hideStoryMode": false,
+	"weekName": "Too Slow Encore Remix",
+	"hiddenUntilUnlocked": false
 }

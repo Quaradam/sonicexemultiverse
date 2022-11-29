@@ -1,7 +1,7 @@
 function onCreate()
 	-- background shit
-	makeLuaSprite('too-slowE/BGSky', 'too-slowE/BGSky', -999, -450);
-	scaleObject('too-slowE/BGSky', 1.5, 1.5);
+	makeLuaSprite('too-slowE/BGSky', 'too-slowE/BGSky', -859, -450);
+	scaleObject('too-slowE/BGSky', 1.2, 1.2);
 	setScrollFactor('too-slowE/BGSky', 0.9, 0.9);
 
 	makeLuaSprite('too-slowE/TreesFG', 'too-slowE/TreesFG', -710, -150);

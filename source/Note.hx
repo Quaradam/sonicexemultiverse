@@ -33,6 +33,8 @@ class Note extends FlxSprite
 	public var prevNote:Note;
 	public var nextNote:Note;
 
+	public var noteStyle:String = 'normal';
+
 	public var spawned:Bool = false;
 
 	public var tail:Array<Note> = []; // for sustains
@@ -138,21 +140,6 @@ class Note extends FlxSprite
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;
 					lowPriority = true;
-				
-				case 'StaticNote':
-					ignoreNote = mustPress;
-					reloadNote('static');
-					noteSplashTexture = 'noteSplashes';
-					
-					if (isSustainNote)
-						{
-							hitHealth = 0.2;
-						}
-					
-					else
-					{
-						hitHealth = 0.5;
-					}
 
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
@@ -165,6 +152,52 @@ class Note extends FlxSprite
 						missHealth = 0.3;
 					}
 					hitCausesMiss = true;
+
+				case 'Static Note':
+			        reloadNote('STATIC');
+					noteSplashTexture = 'noteSplashes';
+					colorSwap.hue = 0;
+					colorSwap.saturation = 0;
+					colorSwap.brightness = 0;
+
+					// function noteMiss(id, noteData, noteType, isSustainNote)
+					// 	if
+					// 		playSound('hitSound', 0.5);
+					// end
+					
+
+				// if
+				// 	{
+				// 		animation.add('greenScroll', [22]);
+				// 		animation.add('redScroll', [23]);
+				// 		animation.add('blueScroll', [21]);
+				// 		animation.add('purpleScroll', [20]);
+				// 	}
+				// else
+				// 	{
+				// 		animation.add('greenScroll', [6]);
+				// 		animation.add('redScroll', [7]);
+				// 		animation.add('blueScroll', [5]);
+				// 		animation.add('purpleScroll', [4]);
+				// 	}
+
+					setGraphicSize(Std.int(width = 100));
+	
+					if(isSustainNote) {
+						missHealth = 0.1;
+					} else {
+						missHealth = 0.3;
+					}
+					// if (noteType =='STATIC'):
+					// 	playSound('hitStatic');
+					// 	addLuaSprite('hitStatic', true)
+
+					
+					
+					
+				antialiasing = true;
+
+				
 				case 'Alt Animation':
 					animSuffix = '-alt';
 				case 'No Animation':
