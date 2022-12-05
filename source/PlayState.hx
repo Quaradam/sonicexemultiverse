@@ -87,7 +87,7 @@ class PlayState extends MusicBeatState
 		['Shit', 0.4], //From 20% to 39%
 		['Bad', 0.5], //From 40% to 49%
 		['Bruh', 0.6], //From 50% to 59%
-		['Meh', 0.69], //From 60% to 68%
+		['СОСЁШЬ', 0.69], //From 60% to 68%
 		['Nice', 0.7], //69%
 		['Good', 0.8], //From 70% to 79%
 		['Great', 0.9], //From 80% to 89%
@@ -438,6 +438,10 @@ class PlayState extends MusicBeatState
 		if(SONG.stage == null || SONG.stage.length < 1) {
 			switch (songName)
 			{
+				case 'too-sloweremix':
+					curStage = 'tooslow';
+				case 'too-slowOG':
+					curStage = 'too-slowOG';
 				case 'spookeez' | 'south' | 'monster':
 					curStage = 'spooky';
 				case 'pico' | 'blammed' | 'philly' | 'philly-nice':
@@ -534,6 +538,18 @@ class PlayState extends MusicBeatState
 					add(stageCurtains);
 				}
 				dadbattleSmokes = new FlxSpriteGroup(); //troll'd
+
+			case 'too-slowOG': //TOO-SLOW ENCORE OG
+				var bg:BGSprite = new BGSprite ('too-slowE/BGSky', -759, -450, 0.9, 0.9);
+				bg.scale.set(1.4, 1.4);
+				add(bg);
+				var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, -20, 1, 1);
+				grass.scale.set(1.4, 1.4);
+				add(grass);
+				var treesfg:BGSprite = new BGSprite ('too-slowE/TreesFG',  -710, -10, 1, 1);
+				treesfg.scale.set(1.35, 1.35);
+				add(treesfg);
+
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
