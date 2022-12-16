@@ -7,7 +7,7 @@ import flixel.group.FlxSpriteGroup;
 import flixel.util.FlxColor;
 import flixel.text.FlxText;
 
-using StringTools;
+using StringTools; 
 
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Achievement save tag, Hidden achievement

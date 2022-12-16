@@ -539,10 +539,14 @@ class PlayState extends MusicBeatState
 				}
 				dadbattleSmokes = new FlxSpriteGroup(); //troll'd
 
+				
 			case 'too-slowOG': //TOO-SLOW ENCORE OG
 				var bg:BGSprite = new BGSprite ('too-slowE/BGSky', -759, -450, 0.9, 0.9);
 				bg.scale.set(1.4, 1.4);
 				add(bg);
+				var outerbush:BGSprite = new BGSprite ('too-slowE/OuterBush',  -860, -150, 1, 1);
+				outerbush.scale.set(1.4, 1.4);
+				add(outerbush);
 				var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, -20, 1, 1);
 				grass.scale.set(1.4, 1.4);
 				add(grass);
