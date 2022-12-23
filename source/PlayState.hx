@@ -544,10 +544,16 @@ class PlayState extends MusicBeatState
 				var bg:BGSprite = new BGSprite ('too-slowE/BGSky', -759, -450, 0.9, 0.9);
 				bg.scale.set(1.4, 1.4);
 				add(bg);
-				var outerbush:BGSprite = new BGSprite ('too-slowE/OuterBush',  -860, -150, 1, 1);
+				var outerbush:BGSprite = new BGSprite ('too-slowE/OuterBush',  -860, -50, 1, 1);
 				outerbush.scale.set(1.4, 1.4);
 				add(outerbush);
-				var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, -20, 1, 1);
+				var treesmidback:BGSprite = new BGSprite ('too-slowE/TreesMidBack', -696, -150, 1, 1);
+				treesmidback.scale.set(1.2, 1.2);
+				add(treesmidback);
+				var treesmid:BGSprite = new BGSprite ('too-slowE/TreesMid', -596, -150, 1, 1);
+				treesmid.scale.set(1.2, 1.2);
+				add(treesmid);
+				var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, 0, 1, 1);
 				grass.scale.set(1.4, 1.4);
 				add(grass);
 				var treesfg:BGSprite = new BGSprite ('too-slowE/TreesFG',  -710, -10, 1, 1);
