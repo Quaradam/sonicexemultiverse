@@ -540,26 +540,29 @@ class PlayState extends MusicBeatState
 				dadbattleSmokes = new FlxSpriteGroup(); //troll'd
 
 				
-			case 'too-slowOG': //TOO-SLOW ENCORE OG
-				var bg:BGSprite = new BGSprite ('too-slowE/BGSky', -759, -450, 0.9, 0.9);
-				bg.scale.set(1.4, 1.4);
-				add(bg);
-				var outerbush:BGSprite = new BGSprite ('too-slowE/OuterBush',  -860, -50, 1, 1);
-				outerbush.scale.set(1.4, 1.4);
-				add(outerbush);
-				var treesmidback:BGSprite = new BGSprite ('too-slowE/TreesMidBack', -696, -150, 1, 1);
-				treesmidback.scale.set(1.2, 1.2);
-				add(treesmidback);
-				var treesmid:BGSprite = new BGSprite ('too-slowE/TreesMid', -596, -150, 1, 1);
-				treesmid.scale.set(1.2, 1.2);
-				add(treesmid);
-				var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, 0, 1, 1);
-				grass.scale.set(1.4, 1.4);
-				add(grass);
-				var treesfg:BGSprite = new BGSprite ('too-slowE/TreesFG',  -710, -10, 1, 1);
-				treesfg.scale.set(1.35, 1.35);
-				add(treesfg);
-
+				case 'too-slowOG': //TOO-SLOW ENCORE OG 
+					var bg:BGSprite = new BGSprite ('too-slowE/BGSky', -759, -450, 0.9, 0.9); 
+					bg.scale.set(1.4, 1.4); 
+					add(bg); 
+					var outerbush:BGSprite = new BGSprite ('too-slowE/OuterBush',  -860, -50, 1, 1); 
+					outerbush.scale.set(1.4, 1.4); 
+					add(outerbush); 
+					var treesmidoutback1:BGSprite = new BGSprite ('too-slowE/TreesOuterMid1', -975, -150, 1, 1); 
+					treesmidoutback1.scale.set(1.2, 1.2); 
+					add(treesmidoutback1); 
+					var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, 0, 1, 1); 
+					grass.scale.set(1.4, 1.4); 
+					add(grass); 
+					var treesmid:BGSprite = new BGSprite ('too-slowE/TreesMid', -596, -150, 1, 1); 
+					treesmid.scale.set(1.2, 1.2); 
+					add(treesmid); 
+					var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, 0, 1, 1); 
+					grass.scale.set(1.4, 1.4); 
+					add(grass); 
+					var treesfg:BGSprite = new BGSprite ('too-slowE/TreesFG',  -710, -10, 1, 1);  
+					treesfg.scale.set(1.35, 1.35); 
+					add(treesfg); 
+ 
 
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
