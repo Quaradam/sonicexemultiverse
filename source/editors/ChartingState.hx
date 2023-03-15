@@ -68,7 +68,8 @@ class ChartingState extends MusicBeatState
 		'Hurt Note',
 		'GF Sing',
 		'No Animation',
-		'Static Note'
+		'Static Note',
+		'SJumpscare'
 		
 	];
 	private var noteTypeIntMap:Map<Int, String> = new Map<Int, String>();
@@ -93,7 +94,8 @@ class ChartingState extends MusicBeatState
 		['Screen Shake', "Value 1: Camera shake\nValue 2: HUD shake\n\nEvery value works as the following example: \"1, 0.05\".\nThe first number (1) is the duration.\nThe second number (0.05) is the intensity."],
 		['Change Character', "Value 1: Character to change (Dad, BF, GF)\nValue 2: New character's name"],
 		['Change Scroll Speed', "Value 1: Scroll Speed Multiplier (1 is default)\nValue 2: Time it takes to change fully in seconds."],
-		['Set Property', "Value 1: Variable name\nValue 2: New value"]
+		['Set Property', "Value 1: Variable name\nValue 2: New value"],
+		['SJumpscare', "Value 1: bro it's just animation\nValue 2: tf you looking here? yo need source code to change it"]
 	];
 
 	var _file:FileReference;

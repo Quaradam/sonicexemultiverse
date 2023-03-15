@@ -1,4 +1,4 @@
-	package;
+package;
 
 import flixel.graphics.FlxGraphic;
 #if desktop
@@ -214,6 +214,7 @@ class PlayState extends MusicBeatState
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
 	public var camHUD:FlxCamera;
+	public var camHUD2:FlxCamera; //jumpsraces bro
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
 	public var cameraSpeed:Float = 1;
@@ -221,6 +222,11 @@ class PlayState extends MusicBeatState
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
 	var dialogueJson:DialogueFile = null;
 
+	var startCircle:FlxSprite;
+	var startText:FlxSprite;
+	var blackscreen:FlxSprite;
+
+	
 	var dadbattleBlack:BGSprite;
 	var dadbattleLight:BGSprite;
 	var dadbattleSmokes:FlxSpriteGroup;
@@ -352,6 +358,10 @@ class PlayState extends MusicBeatState
 			'NOTE_RIGHT'
 		];
 
+		//yeah this shit to start text and circle like in Sonic 1 (1991)
+		startCircle = new FlxSprite();
+		startText = new FlxSprite();
+
 		//Ratings
 		ratingsData.push(new Rating('sick')); //default rating
 
@@ -442,22 +452,10 @@ class PlayState extends MusicBeatState
 					curStage = 'tooslow';
 				case 'too-slowOG':
 					curStage = 'too-slowOG';
-				case 'spookeez' | 'south' | 'monster':
-					curStage = 'spooky';
-				case 'pico' | 'blammed' | 'philly' | 'philly-nice':
-					curStage = 'philly';
-				case 'milf' | 'satin-panties' | 'high':
-					curStage = 'limo';
-				case 'cocoa' | 'eggnog':
-					curStage = 'mall';
-				case 'winter-horrorland':
-					curStage = 'mallEvil';
-				case 'senpai' | 'roses':
-					curStage = 'school';
-				case 'thorns':
-					curStage = 'schoolEvil';
-				case 'ugh' | 'guns' | 'stress':
-					curStage = 'tank';
+				case 'Faker':
+					curStage = 'Faker';
+				case 'ts-phantom':
+					curStage = 'ts-phantom';
 				default:
 					curStage = 'stage';
 			}
@@ -541,173 +539,72 @@ class PlayState extends MusicBeatState
 
 				
 				case 'too-slowOG': //TOO-SLOW ENCORE OG 
-					var bg:BGSprite = new BGSprite ('too-slowE/BGSky', -759, -450, 0.9, 0.9); 
-					bg.scale.set(1.4, 1.4); 
-					add(bg); 
-					var outerbush:BGSprite = new BGSprite ('too-slowE/OuterBush',  -860, -50, 1, 1); 
-					outerbush.scale.set(1.4, 1.4); 
-					add(outerbush); 
-					var treesmidoutback1:BGSprite = new BGSprite ('too-slowE/TreesOuterMid1', -975, -150, 1, 1); 
-					treesmidoutback1.scale.set(1.2, 1.2); 
-					add(treesmidoutback1); 
-					var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, 0, 1, 1); 
-					grass.scale.set(1.4, 1.4); 
-					add(grass); 
-					var treesmid:BGSprite = new BGSprite ('too-slowE/TreesMid', -596, -150, 1, 1); 
-					treesmid.scale.set(1.2, 1.2); 
-					add(treesmid); 
-					var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, 0, 1, 1); 
-					grass.scale.set(1.4, 1.4); 
-					add(grass); 
-					var treesfg:BGSprite = new BGSprite ('too-slowE/TreesFG',  -710, -10, 1, 1);  
-					treesfg.scale.set(1.35, 1.35); 
-					add(treesfg); 
- 
+				// startSong();
+				// startCountdown();
+				// add(blackscreen);
+				// startCircle.loadGraphic(Paths.image('StartScreen/CircleTooSlow', 'exe'));
+				// startCircle.x += 777;
+				// add(startCircle);
+				// startText.loadGraphic(Paths.image('StartScreen/TextTooSlow', 'exe'));
+				// startText.x -= 1200;
+				// add(startText);
+				
+				// new FlxTimer().start(0.6, function(tmr:FlxTimer)
+				// 	{
+				// 		FlxTween.tween(startCircle, {x: 0}, 0.5);
+				// 		FlxTween.tween(startText, {x: 0}, 0.5);
+				// 	});
 
-			case 'spooky': //Week 2
-				if(!ClientPrefs.lowQuality) {
-					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
-				} else {
-					halloweenBG = new BGSprite('halloween_bg_low', -200, -100);
-				}
-				add(halloweenBG);
+				// 	new FlxTimer().start(1.9, function(tmr:FlxTimer)
+				// 	{
+				// 		FlxTween.tween(startCircle, {alpha: 0}, 1);
+				// 		FlxTween.tween(startText, {alpha: 0}, 1);
+				// 		FlxTween.tween(blackscreen, {alpha: 0}, 1);
+				// 	});
 
-				halloweenWhite = new BGSprite(null, -800, -400, 0, 0);
-				halloweenWhite.makeGraphic(Std.int(FlxG.width * 2), Std.int(FlxG.height * 2), FlxColor.WHITE);
-				halloweenWhite.alpha = 0;
-				halloweenWhite.blend = ADD;
 
-				//PRECACHE SOUNDS
-				precacheList.set('thunder_1', 'sound');
-				precacheList.set('thunder_2', 'sound');
+				var bg:BGSprite = new BGSprite ('too-slowE/BGSky', -759, -450, 0.9, 0.9); 
+				bg.scale.set(1.4, 1.4); 
+				add(bg); 
+				var outerbush:BGSprite = new BGSprite ('too-slowE/OuterBush',  -860, -50, 1, 1); 
+				outerbush.scale.set(1.4, 1.4); 
+				add(outerbush); 
+				var treesmidoutback1:BGSprite = new BGSprite ('too-slowE/TreesOuterMid1', -975, -150, 1, 1); 
+				treesmidoutback1.scale.set(1.2, 1.2); 
+				add(treesmidoutback1); 
+				var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, 0, 1, 1); 
+				grass.scale.set(1.4, 1.4); 
+				add(grass); 
+				var treesmid:BGSprite = new BGSprite ('too-slowE/TreesMid', -596, -150, 1, 1); 
+				treesmid.scale.set(1.2, 1.2); 
+				add(treesmid); 
+				var grass:BGSprite = new BGSprite ('too-slowE/Grass',  -759, 0, 1, 1); 
+				grass.scale.set(1.4, 1.4); 
+				add(grass); 
+				var treesfg:BGSprite = new BGSprite ('too-slowE/TreesFG',  -710, -10, 1, 1);  
+				treesfg.scale.set(1.35, 1.35); 
+				add(treesfg); 
 
-			case 'philly': //Week 3
-				if(!ClientPrefs.lowQuality) {
-					var bg:BGSprite = new BGSprite('philly/sky', -100, 0, 0.1, 0.1);
-					add(bg);
-				}
 
-				var city:BGSprite = new BGSprite('philly/city', -10, 0, 0.3, 0.3);
-				city.setGraphicSize(Std.int(city.width * 0.85));
-				city.updateHitbox();
-				add(city);
+				case 'Faker': //faker level
+				var sky:FlxSprite = new FlxSprite(-631.8, -493.15).loadGraphic(Paths.image('FakerBG/sky', 'exe'));
+				sky.antialiasing = true;
+				sky.scrollFactor.set(1, 1);
+				sky.scale.set(0.9, 0.9);
+				add(sky);
 
-				phillyLightsColors = [0xFF31A2FD, 0xFF31FD8C, 0xFFFB33F5, 0xFFFD4531, 0xFFFBA633];
-				phillyWindow = new BGSprite('philly/window', city.x, city.y, 0.3, 0.3);
-				phillyWindow.setGraphicSize(Std.int(phillyWindow.width * 0.85));
-				phillyWindow.updateHitbox();
-				add(phillyWindow);
-				phillyWindow.alpha = 0;
+				case 'ts-phantom': // too slow phantom remix
+				startSong();
+				startCountdown();
+				add(blackscreen);
+				startCircle.loadGraphic(Paths.image('StartScreen/CircleTooSlow', 'exe'));
+				startCircle.x += 777;
+				add(startCircle);
+				startText.loadGraphic(Paths.image('StartScreen/TextTooSlow', 'exe'));
+				startText.x -= 1200;
+				add(startText);
 
-				if(!ClientPrefs.lowQuality) {
-					var streetBehind:BGSprite = new BGSprite('philly/behindTrain', -40, 50);
-					add(streetBehind);
-				}
-
-				phillyTrain = new BGSprite('philly/train', 2000, 360);
-				add(phillyTrain);
-
-				trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));
-				FlxG.sound.list.add(trainSound);
-
-				phillyStreet = new BGSprite('philly/street', -40, 50);
-				add(phillyStreet);
-
-			case 'limo': //Week 4
-				var skyBG:BGSprite = new BGSprite('limo/limoSunset', -120, -50, 0.1, 0.1);
-				add(skyBG);
-
-				if(!ClientPrefs.lowQuality) {
-					limoMetalPole = new BGSprite('gore/metalPole', -500, 220, 0.4, 0.4);
-					add(limoMetalPole);
-
-					bgLimo = new BGSprite('limo/bgLimo', -150, 480, 0.4, 0.4, ['background limo pink'], true);
-					add(bgLimo);
-
-					limoCorpse = new BGSprite('gore/noooooo', -500, limoMetalPole.y - 130, 0.4, 0.4, ['Henchmen on rail'], true);
-					add(limoCorpse);
-
-					limoCorpseTwo = new BGSprite('gore/noooooo', -500, limoMetalPole.y, 0.4, 0.4, ['henchmen death'], true);
-					add(limoCorpseTwo);
-
-					grpLimoDancers = new FlxTypedGroup<BackgroundDancer>();
-					add(grpLimoDancers);
-
-					for (i in 0...5)
-					{
-						var dancer:BackgroundDancer = new BackgroundDancer((370 * i) + 170, bgLimo.y - 400);
-						dancer.scrollFactor.set(0.4, 0.4);
-						grpLimoDancers.add(dancer);
-					}
-
-					limoLight = new BGSprite('gore/coldHeartKiller', limoMetalPole.x - 180, limoMetalPole.y - 80, 0.4, 0.4);
-					add(limoLight);
-
-					grpLimoParticles = new FlxTypedGroup<BGSprite>();
-					add(grpLimoParticles);
-
-					//PRECACHE BLOOD
-					var particle:BGSprite = new BGSprite('gore/stupidBlood', -400, -400, 0.4, 0.4, ['blood'], false);
-					particle.alpha = 0.01;
-					grpLimoParticles.add(particle);
-					resetLimoKill();
-
-					//PRECACHE SOUND
-					precacheList.set('dancerdeath', 'sound');
-				}
-
-				limo = new BGSprite('limo/limoDrive', -120, 550, 1, 1, ['Limo stage'], true);
-
-				fastCar = new BGSprite('limo/fastCarLol', -300, 160);
-				fastCar.active = true;
-				limoKillingState = 0;
-
-			case 'mall': //Week 5 - Cocoa, Eggnog
-				var bg:BGSprite = new BGSprite('christmas/bgWalls', -1000, -500, 0.2, 0.2);
-				bg.setGraphicSize(Std.int(bg.width * 0.8));
-				bg.updateHitbox();
-				add(bg);
-
-				if(!ClientPrefs.lowQuality) {
-					upperBoppers = new BGSprite('christmas/upperBop', -240, -90, 0.33, 0.33, ['Upper Crowd Bob']);
-					upperBoppers.setGraphicSize(Std.int(upperBoppers.width * 0.85));
-					upperBoppers.updateHitbox();
-					add(upperBoppers);
-
-					var bgEscalator:BGSprite = new BGSprite('christmas/bgEscalator', -1100, -600, 0.3, 0.3);
-					bgEscalator.setGraphicSize(Std.int(bgEscalator.width * 0.9));
-					bgEscalator.updateHitbox();
-					add(bgEscalator);
-				}
-
-				var tree:BGSprite = new BGSprite('christmas/christmasTree', 370, -250, 0.40, 0.40);
-				add(tree);
-
-				bottomBoppers = new BGSprite('christmas/bottomBop', -300, 140, 0.9, 0.9, ['Bottom Level Boppers Idle']);
-				bottomBoppers.animation.addByPrefix('hey', 'Bottom Level Boppers HEY', 24, false);
-				bottomBoppers.setGraphicSize(Std.int(bottomBoppers.width * 1));
-				bottomBoppers.updateHitbox();
-				add(bottomBoppers);
-
-				var fgSnow:BGSprite = new BGSprite('christmas/fgSnow', -600, 700);
-				add(fgSnow);
-
-				santa = new BGSprite('christmas/santa', -840, 150, 1, 1, ['santa idle in fear']);
-				add(santa);
-				precacheList.set('Lights_Shut_off', 'sound');
-
-			case 'mallEvil': //Week 5 - Winter Horrorland
-				var bg:BGSprite = new BGSprite('christmas/evilBG', -400, -500, 0.2, 0.2);
-				bg.setGraphicSize(Std.int(bg.width * 0.8));
-				bg.updateHitbox();
-				add(bg);
-
-				var evilTree:BGSprite = new BGSprite('christmas/evilTree', 300, -300, 0.2, 0.2);
-				add(evilTree);
-
-				var evilSnow:BGSprite = new BGSprite('christmas/evilSnow', -200, 700);
-				add(evilSnow);
-
+			
 			case 'school': //Week 6 - Senpai, Roses
 				GameOverSubstate.deathSoundName = 'fnf_loss_sfx-pixel';
 				GameOverSubstate.loopSoundName = 'gameOver-pixel';
@@ -1058,7 +955,7 @@ class PlayState extends MusicBeatState
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
-		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat(Paths.font("sonic-font.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
@@ -1176,14 +1073,14 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat(Paths.font("sonic-font.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
-		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		botplayTxt.setFormat(Paths.font("sonic-font.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
@@ -2394,11 +2291,12 @@ class PlayState extends MusicBeatState
 	var previousFrameTime:Int = 0;
 	var lastReportedPlayheadPosition:Int = 0;
 	var songTime:Float = 0;
+	var songStarted = false;
 
 	function startSong():Void
 	{
 		startingSong = false;
-
+		songStarted = true;
 		previousFrameTime = FlxG.game.ticks;
 		lastReportedPlayheadPosition = 0;
 
@@ -5058,6 +4956,11 @@ class PlayState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
+
+		// if(curBeat == 120 && curSong == 'too-slowOG')
+		// 	{
+		// 		boyfriend.playAnim('hey', true);
+		// 	}
 
 		if(lastBeatHit >= curBeat) {
 			//trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);

@@ -7,6 +7,7 @@ import flixel.math.FlxMath;
 import flixel.util.FlxColor;
 import flash.display.BitmapData;
 import editors.ChartingState;
+import flixel.util.FlxTimer;
 
 using StringTools;
 
@@ -159,43 +160,16 @@ class Note extends FlxSprite
 					colorSwap.hue = 0;
 					colorSwap.saturation = 0;
 					colorSwap.brightness = 0;
-
-					// function noteMiss(id, noteData, noteType, isSustainNote)
-					// 	if
-					// 		playSound('hitSound', 0.5);
-					// end
-					
-
-				// if
-				// 	{
-				// 		animation.add('greenScroll', [22]);
-				// 		animation.add('redScroll', [23]);
-				// 		animation.add('blueScroll', [21]);
-				// 		animation.add('purpleScroll', [20]);
-				// 	}
-				// else
-				// 	{
-				// 		animation.add('greenScroll', [6]);
-				// 		animation.add('redScroll', [7]);
-				// 		animation.add('blueScroll', [5]);
-				// 		animation.add('purpleScroll', [4]);
-				// 	}
-
 					setGraphicSize(Std.int(width = 100));
-	
+					
 					if(isSustainNote) {
 						missHealth = 0.1;
 					} else {
 						missHealth = 0.3;
 					}
-					// if (noteType =='STATIC'):
-					// 	playSound('hitStatic');
-					// 	addLuaSprite('hitStatic', true)
 
-					
-					
-					
-				antialiasing = true;
+
+					antialiasing = true;
 
 				
 				case 'Alt Animation':
