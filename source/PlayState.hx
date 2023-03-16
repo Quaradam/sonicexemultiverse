@@ -539,29 +539,6 @@ class PlayState extends MusicBeatState
 
 				
 				case 'too-slowOG': //TOO-SLOW ENCORE OG 
-				// startSong();
-				// startCountdown();
-				// add(blackscreen);
-				// startCircle.loadGraphic(Paths.image('StartScreen/CircleTooSlow', 'exe'));
-				// startCircle.x += 777;
-				// add(startCircle);
-				// startText.loadGraphic(Paths.image('StartScreen/TextTooSlow', 'exe'));
-				// startText.x -= 1200;
-				// add(startText);
-				
-				// new FlxTimer().start(0.6, function(tmr:FlxTimer)
-				// 	{
-				// 		FlxTween.tween(startCircle, {x: 0}, 0.5);
-				// 		FlxTween.tween(startText, {x: 0}, 0.5);
-				// 	});
-
-				// 	new FlxTimer().start(1.9, function(tmr:FlxTimer)
-				// 	{
-				// 		FlxTween.tween(startCircle, {alpha: 0}, 1);
-				// 		FlxTween.tween(startText, {alpha: 0}, 1);
-				// 		FlxTween.tween(blackscreen, {alpha: 0}, 1);
-				// 	});
-
 
 				var bg:BGSprite = new BGSprite ('too-slowE/BGSky', -759, -450, 0.9, 0.9); 
 				bg.scale.set(1.4, 1.4); 
