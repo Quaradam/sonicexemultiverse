@@ -1,0 +1,32 @@
+{
+	"storyName": "Too Slow Phantom Remix",
+	"difficulties": "hard",
+	"hideFreeplay": false,
+	"weekBackground": "menu_ts",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": true,
+	"songs": [
+		[
+			"TS Phantom",
+			"sonicexe",
+			[
+				120,
+				0,
+				255
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Phantom Remix"
+}

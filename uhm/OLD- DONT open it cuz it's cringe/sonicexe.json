@@ -1,0 +1,32 @@
+{
+	"songs": [
+		[
+			"Too-slow-eremix",
+			"sonicexe",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "",
+	"weekCharacters": [
+		"sonicexe",
+		"",
+		"bf"
+	],
+	"storyName": "HILL ZONE",
+	"weekName": "SonicEXE",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}
